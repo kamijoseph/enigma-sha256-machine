@@ -40,11 +40,18 @@ pip install
 
 Run from the terminal:
 
+```bash
+
 enigma_sim
+
+```
 
 or
 
+```
 python -m enigma_sim.cli
+
+```
 
 ## 🧪 Testing
 
