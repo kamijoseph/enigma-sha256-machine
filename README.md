@@ -29,8 +29,6 @@ Just look damn cool on GitHub and PyPI 😎
 git clone https://github.com/kamijoseph/enigma-sha256-machine.git
 
 cd enigma-sim
-
-pip install
 ```
 
 
