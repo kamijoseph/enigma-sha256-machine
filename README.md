@@ -4,7 +4,7 @@
 
 Enigma-Sim is a Python-based emulator of the legendary WWII Enigma machine — enhanced with SHA-256 encrypted settings to modernize its cryptographic principles. Built for education, fun, and to show off in your portfolio.
 
-## 🕰️ A Brief History (With Respect)
+## 🕰️ A Brief History 
 
 The Enigma machine was used by Nazi Germany to encrypt military messages during World War II. At its peak, it was believed to be unbreakable — until Allied codebreakers, including Polish mathematicians and British cryptanalyst Alan Turing, cracked it. That breakthrough shifted the tide of the war and laid the groundwork for modern computing and cybersecurity.
 
@@ -25,7 +25,9 @@ Just look damn cool on GitHub and PyPI 😎
 ## Installation and Usage
 
 git clone https://github.com/kamijoseph/enigma-sha256-machine.git
+
 cd enigma-sim
+
 pip install .
 
 ## 🚀 Usage
