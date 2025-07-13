@@ -55,9 +55,11 @@ python -m enigma_sim.cli
 
 ## 🧪 Testing
 
-To run tests (if you’ve added any):
+To run tests :
 
+```
 pytest tests/
+```
 
 ## 🧠 Fun Fact
 
