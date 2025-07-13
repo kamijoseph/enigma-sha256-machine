@@ -22,7 +22,7 @@ Provide a CLI + API cipher tool usable in modern workflows
 
 Just look damn cool on GitHub and PyPI 😎
 
-## Installation and Usage
+## 🤖Installation and Usage
 
 ```bash
 
