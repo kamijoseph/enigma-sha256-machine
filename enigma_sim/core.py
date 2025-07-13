@@ -26,3 +26,39 @@ def derive_settings_from_hash(hash_value):
         "positions": positions,
         "plugboard": plugboard_pairs
     }
+    
+# rotor method class
+class Rotor:
+    def __init__(self, wiring, notch, position='A'):
+        self.wiring = wiring
+        self.notch = notch
+        self.position = position
+        
+    def encipher_forward(self, c):
+        offset = string.ascii_uppercase.index(self.position)
+        index = (string.ascii_uppercase.index(c) + offset) % 26
+        return self.wiring[index]
+    
+    def encipher_backward(self, c):
+        offset = string.ascii_lowercase.index(self.position)
+        index = self.wiring.index(c)
+        return string.ascii_uppercase(index - offset) % 26
+    
+    def step(self):
+        self.position = rotate_chars(self.position, 1)
+        return self.position == self.notch
+    
+# plugboard method class
+class Plugboard:
+    def __init__(self):
+        pass
+
+# reflector method class   
+class Reflector:
+    def __init__(self):
+        pass
+
+# the main enigma machine class
+class EnigmaMachine:
+    def __init__(self):
+        pass
