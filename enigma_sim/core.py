@@ -59,8 +59,11 @@ class Plugboard:
 
 # reflector method class   
 class Reflector:
-    def __init__(self):
-        pass
+    def __init__(self, wiring):
+        self.wiring = wiring
+    
+    def reflect(self, c):
+        return self.wiring[string.ascii_uppercase.index(c)]
 
 # the main enigma machine class
 class EnigmaMachine:
