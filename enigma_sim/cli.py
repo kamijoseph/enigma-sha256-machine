@@ -11,7 +11,7 @@ def enigma_cli():
     message = input('Enter Message: ').strip().upper()
     
     if mode == "encrypt":
-        pass_phrase = input('Enter Pass Phrase').strip()
+        pass_phrase = input('Enter Pass Phrase: ').strip()
         hashed = sha256_hash(pass_phrase)
         settings = derive_settings_from_hash(hashed)
     elif mode == "decrypt":
@@ -19,7 +19,7 @@ def enigma_cli():
         settings = derive_settings_from_hash(hashed)
     else:
         print("Invalid mode of operation. Enter 'Encrypt' or 'Decrypt'")
-        return
+        return enigma_cli()
     
     rotors = [Rotor(ROTORS[i], notch='Q', position=p) for i, p in zip(settings['rotors'], settings['positions'])]
     plugboard = Plugboard(settings['plugboard'])
@@ -31,3 +31,6 @@ def enigma_cli():
     print("\n>>>>> Results <<<<<")
     print(f"Result: {result}")
     print(f"Hash {hashed}")
+
+if __name__ == "__main__":
+    enigma_cli()

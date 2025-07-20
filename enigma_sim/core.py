@@ -96,7 +96,7 @@ class EnigmaMachine:
 
         # backward rotors
         for rotor in self.rotors:
-            c = rotor.encipher_backwards(c)
+            c = rotor.encipher_backward(c)
 
         # plugboard out
         return self.plugboard.swap(c)
