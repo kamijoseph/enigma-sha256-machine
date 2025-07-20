@@ -100,3 +100,7 @@ class EnigmaMachine:
 
         # plugboard out
         return self.plugboard.swap(c)
+    
+    def message_encryption(self, message):
+        return ''.join(self.encrypt_characters(c) for c in message if c in string.ascii_uppercase)
+    
