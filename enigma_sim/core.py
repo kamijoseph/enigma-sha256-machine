@@ -40,9 +40,9 @@ class Rotor:
         return self.wiring[index]
     
     def encipher_backward(self, c):
-        offset = string.ascii_lowercase.index(self.position)
+        offset = string.ascii_uppercase.index(self.position)
         index = self.wiring.index(c)
-        return string.ascii_uppercase(index - offset) % 26
+        return string.ascii_uppercase[(index - offset) % 26]
     
     def step(self):
         self.position = rotate_chars(self.position, 1)
@@ -65,7 +65,7 @@ class Reflector:
     def reflect(self, c):
         return self.wiring[string.ascii_uppercase.index(c)]
 
-# the main enigma machine class
+# main enigma machine class
 class EnigmaMachine:
     def __init__(self, rotors, reflector, plugboard):
         self.rotors = rotors
@@ -102,7 +102,9 @@ class EnigmaMachine:
         return self.plugboard.swap(c)
     
     def message_encryption(self, message):
-        return ''.join(self.encrypt_characters(c) for c in message if c in string.ascii_uppercase)
+        return ''.join(self.encrypt_characters(c)
+                       for c in message.upper()
+                       if c in string.ascii_uppercase)
 
 # default rtors and reflectors
 ROTORS = [
@@ -112,5 +114,7 @@ ROTORS = [
     "ESOVPZJAYQUIRHXLNFTGKDCMWB",
     "VZBRGITYUPSDNHLXAWMJQOFECK"
 ]
+
+NOTCHES = ['Q', 'E', 'V', 'J', 'Z']
 
 REFLECTOR_B = "YRUHQSLDPXNGOKMIEBFZCWVJAT"
