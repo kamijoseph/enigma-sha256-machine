@@ -20,7 +20,7 @@ Practice real Python packaging and modular design
 
 Provide a CLI + API cipher tool usable in modern workflows
 
-Just look damn cool on GitHub and PyPI 😎
+Just look damn cool, dont you think😎
 
 ## 🤖Installation and Usage
 
@@ -28,7 +28,7 @@ Just look damn cool on GitHub and PyPI 😎
 
 git clone https://github.com/kamijoseph/enigma-sha256-machine.git
 
-cd enigma-sim
+cd enigma-sha256-machine
 ```
 
 
