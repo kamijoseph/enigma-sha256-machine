@@ -67,5 +67,36 @@ class Reflector:
 
 # the main enigma machine class
 class EnigmaMachine:
-    def __init__(self):
-        pass
+    def __init__(self, rotors, reflector, plugboard):
+        self.rotors = rotors
+        self.reflector = reflector
+        self.plugboard = plugboard
+
+    def encrypt_characters(self, c):
+        if c not in string.ascii_uppercase:
+            return c
+        
+        # step rotors
+        rotate_next = self.rotors[-1].step()
+        for i in reversed(range(len(self.rotors) - 1)):
+            if rotate_next:
+                rotate_next = self.rotors[i].step()
+            else:
+                break
+        
+        # plugboard in
+        c = self.plugboard.swap(c)
+
+        # forward rotors
+        for rotor in reversed(self.rotors):
+            c = rotor.encipher_forward(c)
+
+        # reflect
+        c = self.reflector.reflect(c)
+
+        # backward rotors
+        for rotor in self.rotors:
+            c = rotor.encipher_backwards(c)
+
+        # plugboard out
+        return self.plugboard.swap(c)
