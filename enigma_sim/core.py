@@ -50,8 +50,12 @@ class Rotor:
     
 # plugboard method class
 class Plugboard:
-    def __init__(self):
-        pass
+    def __init__(self, connections):
+        self.mapping = {a: b for a, b in connections}
+        self.mapping.update({b: a for a, b in connections})
+    
+    def swap(self, c):
+        return self.mapping.get(c, c)
 
 # reflector method class   
 class Reflector:
