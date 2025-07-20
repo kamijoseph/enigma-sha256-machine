@@ -103,4 +103,14 @@ class EnigmaMachine:
     
     def message_encryption(self, message):
         return ''.join(self.encrypt_characters(c) for c in message if c in string.ascii_uppercase)
-    
+
+# default rtors and reflectors
+ROTORS = [
+    "EKMFLGDQVZNTOWYHXUSPAIBRCJ",
+    "AJDKSIRUXBLHWTMCQGZNPYFVOE",
+    "BDFHJLCPRTXVZNYEIWGAKMUSQO",
+    "ESOVPZJAYQUIRHXLNFTGKDCMWB",
+    "VZBRGITYUPSDNHLXAWMJQOFECK"
+]
+
+REFLECTOR_B = "YRUHQSLDPXNGOKMIEBFZCWVJAT"
