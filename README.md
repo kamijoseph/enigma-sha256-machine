@@ -2,7 +2,7 @@
 
  
 
-Enigma-Sim is a Python-based emulator of the legendary WWII Enigma machine — enhanced with SHA-256 encrypted settings to modernize its cryptographic principles. Built for education, fun, and to show off in your portfolio.
+Enigma-Sim is a Python-based emulator of the legendary WWII Enigma machine — enhanced with SHA-256 encrypted settings to modernize its cryptographic principles. Built for education, and for fun
 
 ## 🕰️ A Brief History 
 
